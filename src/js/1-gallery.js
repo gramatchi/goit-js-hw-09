@@ -1,3 +1,8 @@
+// Описаний в документації
+import SimpleLightbox from 'simplelightbox';
+// Додатковий імпорт стилів
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const images = [
   {
     preview:
@@ -86,7 +91,12 @@ function imagesTemplate(arr) {
 
 refs.ulGalleryRef.innerHTML = imagesTemplate(images);
 
-const linksGalleryRef = document.querySelectorAll('.gallery-link');
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
+//const linksGalleryRef = document.querySelectorAll('.gallery-link');
 
 //   refs.ulGalleryRef.addEventListener("click", imageOnClick);
 
