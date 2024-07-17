@@ -19,8 +19,6 @@ formRef.addEventListener('input', event => {
   localStorage.setItem(LOCAL_KEY, JSON.stringify(formData));
 });
 
-initFormData();
-
 formRef.addEventListener('submit', e => {
   e.preventDefault();
 
