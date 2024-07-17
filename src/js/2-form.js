@@ -3,7 +3,6 @@ const LOCAL_KEY = 'feedback-form-state';
 
 const formRef = document.querySelector('.feedback-form');
 
-// Инициализация данных формы при загрузке страницы
 function initFormData() {
   const localFormData = JSON.parse(localStorage.getItem(LOCAL_KEY));
   if (localFormData !== null) {
